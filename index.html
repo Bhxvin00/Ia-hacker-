@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Untitled</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="1080x1080.png">
+    <title>Login - Hacker I.A</title>
+    <style>
+/* Estilo geral */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Fundo escuro */
+    color: #ccc; /* Texto em cinza claro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    max-width: 350px;
+    width: 100%; /* Garante que o layout funcione em telas menores */
+    padding: 20px;
+    border: 1px solid #333;
+    border-radius: 10px;
+    background-color: #1a1a1a;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Sombra para dar profundidade */
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #eee;
+    margin-bottom: 5px;
+}
+
+h1 .icon {
+    font-size: 1.2rem;
+    color: #b22222; /* Vermelho */
+    vertical-align: middle;
+}
+
+h2 {
+    font-size: 1rem;
+    margin-top: -10px;
+    color: #bbb;
+    font-weight: normal;
+}
+
+/* Estilo do formulário */
+.login-form {
+    margin-top: 20px;
+}
+
+.login-form label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    color: #bbb;
+    font-size: 0.9rem;
+    text-transform: lowercase;
+}
+
+.login-form input {
+    width: 100%; /* Ajusta largura para caber dentro do container */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #121212;
+    color: #ccc;
+    font-size: 1rem;
+    box-sizing: border-box; /* Evita estouro dos inputs */
+    transition: border-color 0.3s;
+}
+
+.login-form input:focus {
+    border-color: #888;
+    outline: none;
+}
+
+/* Botão de Entrar */
+.login-form button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #b22222; /* Vermelho forte */
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.login-form button:hover {
+    background-color: #d32f2f; /* Vermelho mais claro */
+    transform: scale(1.02); /* Leve aumento no hover */
+}
+
+.login-form button:active {
+    background-color: #9a1d1d; /* Vermelho mais escuro no clique */
+    transform: scale(0.98);
+}
+
+/* Botões de redes sociais */
+.social-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.button {
+    padding: 10px;
+    flex: 1;
+    margin: 0 5px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1rem;
+    cursor: pointer;
+    text-transform: lowercase;
+    color: #ccc;
+    background-color: #121212;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.button.instagram:hover {
+    background: linear-gradient(45deg, #833AB4, #FD1D1D, #FCB045); /* Gradiente Instagram */
+    color: #fff;
+    border-color: transparent;
+}
+
+.button.whatsapp:hover {
+    background-color: #43a1e1; /* Verde WhatsApp */
+    color: #fff;
+    border-color: transparent;
+}
+
+footer {
+    margin-top: 20px;
+    font-size: 0.8rem;
+    color: #555;
+}canvas {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+}.error {
+            color: red;
+            margin-bottom: 10px;
+        }
+
+    </style>
+</head>
+<body>
+            <canvas id="matrix"></canvas>
+    <div class="container">
+        <img src="logo1.png" style="width:150px;margin-bottom: 16px;">
+        <h2>(BLAZE E JONBET)</h2>
+        
+        <form class="login-form" action="./index.php" method="POST">
+                                    <label for="login">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" name="senha" required>
+
+            <button type="submit">Entrar</button>
+        </form>
+
+        <div class="social-links">
+            <a href="http://instagram.com/hacker.magnata" style="    width: 100%;"><div class="button instagram"><img src="instagram.webp" style="width: 2.5em;"></div></a>
+            <a href="http://t.me/hackermagnata" style="    width: 100%;"><div class="button whatsapp"><img src="whatsapp.png" style="width: 2.5em;"></div></a>
+        </div>
+
+        <footer>
+            <p>I.A atualizada em 08/01/2025</p>
+        </footer>
+    </div>
+</body>
+<script>
+    // Pegando o elemento do Canvas
+const c = document.getElementById("matrix");
+
+// Definindo o seu contexto
+const ctx = c.getContext("2d");
+
+// definindo o canvas com tamanho máximo da tela
+c.height = window.innerHeight;
+c.width = window.innerWidth;
+
+// letras do Matrix Rain
+// ver mais em: https://bit.ly/3yFJoU3
+const letters = ["日","ﾊ","ﾐ","ﾋ","ｰ","ｳ","ｼ","ﾅ","ﾓ","ﾆ","ｻ","ﾜ","ﾂ","ｵ","ﾘ","ｱ","ﾎ","ﾃ","ﾏ","ｹ","ﾒ","ｴ","ｶ","ｷ","ﾑ","ﾕ","ﾗ","ｾ","ﾈ","ｽ","ﾀ","ﾇ","ﾍ",":","・",".","=","*","+","-","<",">","¦","｜","ﾘ"];
+
+const fontSize = 18;
+
+// definindo quantas colunas serão necessárias pelo tamanho da tela e fonte
+const columns = c.width / fontSize;
+
+// criando um array para cada gota, sempre iniciando na posição do y=1
+const drops = new Array(Math.floor(columns)).fill(1);
+
+function draw() {
+  // preenchendo a tela toda de preto com opacidade
+  // esse truque da opacidade será útil para o efeito 
+  // das letras sumindo aos poucos
+  ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+  ctx.fillRect(0, 0, c.width, c.height);
+
+  // definindo a cor e estilo da fonte
+  ctx.fillStyle = "RED";
+  ctx.font = `${fontSize}px arial`;
+
+  for (let i = 0; i < drops.length; i++) {
+    // pegando uma letra randomicamente no nosso array
+    const text = letters[Math.floor(Math.random() * letters.length)];
+
+    // escrevendo na tela
+    ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+    // resetando a posição da gota ao chegar no fim
+    if (drops[i] * fontSize > c.height && Math.random() > 0.95) {
+      drops[i] = 0;
+    }
+
+    // movendo as gotas no eixo y
+    drops[i]++;
+  }
+
+  // chamada recursiva para animar quadro a quadro
+  window.requestAnimationFrame(draw);
+}
+
+// chamando a função criada
+draw()
+</script>
+<!--<script disable-devtool-auto src="https://cdn.jsdelivr.net/npm/disable-devtool"></script>--></html>
+<!-- partial -->
+  
+</body>
+</html>
